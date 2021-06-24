@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.nomesite{
+  background-image:url("../Imagens/background.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover
+  
+}
+
+.nomesite p{
+color: white;
+}
+
+
+/*define as propiedes de estilo do menu*/
+#menu {
+    background-color: rgb(0, 0, 0);
+}
+
+#menu ul{
+    max-width: 100%;
+    list-style: none;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+#menu ul li{
+    display: inline;
+  
+   
+}
+
+#menu ul li a{
+    color: #fff;
+    padding: 20px 40px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+   
+}
+
+#menu ul li a:hover {
+    background-color: blueviolet;
+}
+
+#menu ul li:last-child a {
+    float: right;
+    background-color: blueviolet;
+    padding: 20px ;
+}
+
+.nomesite{
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: white
+}
+
+
+/*Define as propiedades de estilo do grid de noticias do HOME*/
+.container {
+  display: grid;
+  grid-template: 150vh 20vh 10vh/1fr 2fr 1fr;
+  grid-gap: 20px;
+
+}
+
+header {
+  background: yellow;
+  height: 150vh;
+}
+
+main {
+  background: blue;
+  height: 150vh;
+}
+
+aside {
+  background: green;
+  height: 100px;
+}
+
+footer {
+  background: red;
+  height: 10vh;
+}
+  
+
+  /* Cria a parte responsiva para aparelhos com tela pequena*/
+  @media (max-width: 600px) {
+    .grid1 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid1 > div:nth-child(n + 4) {
+      display: block;
+    }
+    .grid1 > div.anuncio {
+      grid-column: auto;
+      grid-row: auto;
+      order: -1;
+    }
+  }
+
